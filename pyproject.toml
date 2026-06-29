@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpaper-semantic-disruption"
+version = "0.1.0"
+description = "Sanitized research-code toolkit for semantic visibility and citation-disruption analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Zpaper contributors"}
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0"
+]
+
+[project.scripts]
+zpaper-make-sample-data = "zpaper.make_sample_data:main"
+zpaper-semantic-disruption = "zpaper.semantic_disruption:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

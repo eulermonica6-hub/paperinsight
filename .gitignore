@@ -1,0 +1,51 @@
+# Private research data and derived outputs
+/paper_dataset3.csv
+/IJOIM_dataset.csv
+/USEDATA/
+/outputs/
+/preresults/
+/redraw/
+/Target journal/
+/data/private/
+
+# Manuscripts, target-journal PDFs, rendered figures, and working notes
+/*.docx
+/*.pdf
+/*.png
+/*.txt
+!/requirements.txt
+
+# Original local scripts may contain draft manuscript prose or private paths.
+/caculate1.py
+/Sindexperpaper2.py
+/scripts/
+
+# Keep the sanitized open-source package and synthetic reference data.
+!/src/
+!/data/
+!/data/sample/
+!/data/sample/**
+!/docs/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

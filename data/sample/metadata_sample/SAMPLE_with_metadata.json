@@ -1,0 +1,38 @@
+[
+  {
+    "INFO": "SYNTHETIC_SAMPLE",
+    "note": "Generated demonstration records. No real titles, abstracts, authors, or DOIs are included."
+  },
+  {
+    "Title": "Synthetic Study of Search Interface Signals",
+    "Introduction": "Examines how visible interface cues shape discovery behavior in a controlled demo setting.",
+    "Methods": "Uses simulated paper-level indicators and deterministic random variation.",
+    "Results": "Higher synthetic visibility scores are associated with a higher generated disruption share.",
+    "Discussion": "This record exists only to document the metadata schema used by the project.",
+    "TI": "Synthetic Study of Search Interface Signals",
+    "AB": "Synthetic abstract written for repository testing and examples.",
+    "SO": "SYNTHETIC JOURNAL OF INFORMATION SCIENCE",
+    "AU": "Synthetic Author 1; Synthetic Author 2",
+    "DT": "Article",
+    "PY": 2024,
+    "VL": 1,
+    "IS": 1,
+    "DI": "10.0000/zpaper.sample.metadata.0001"
+  },
+  {
+    "Title": "Synthetic Paper on Knowledge Diffusion Metrics",
+    "Introduction": "Introduces a toy problem for validating IMRAD-style extraction pipelines.",
+    "Methods": "Combines fabricated structured fields with schema-compatible identifiers.",
+    "Results": "The sample can exercise loaders without revealing the private corpus.",
+    "Discussion": "Replace this file with properly licensed private or public metadata for real analysis.",
+    "TI": "Synthetic Paper on Knowledge Diffusion Metrics",
+    "AB": "Another synthetic abstract for code examples only.",
+    "SO": "JOURNAL OF DEMO SCHOLARLY RESEARCH",
+    "AU": "Synthetic Author 3",
+    "DT": "Article",
+    "PY": 2025,
+    "VL": 1,
+    "IS": 2,
+    "DI": "10.0000/zpaper.sample.metadata.0002"
+  }
+]
