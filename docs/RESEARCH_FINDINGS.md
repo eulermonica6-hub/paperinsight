@@ -27,7 +27,22 @@ The design uses text available at publication time and downstream citation outco
 
 The companion line constructs `Q_Score`, `H_Score`, and `QWHI`, weighted h-index-like visibility measures, and compares them with journal impact factor and citation/disruption indicators. These measures are intended as alternative or quality-adjusted visibility outcomes, not as replacements for the primary disruption measure.
 
-## 3. Current evidence map
+## 3. Stage-by-stage progress ledger
+
+| Stage | Completed contribution | Public status |
+| --- | --- | --- |
+| Data engineering | Consolidated paper-level metadata, publication year/volume/issue fields, citation counts, reference counts, journal controls, and disruption counts; documented missingness and duplicate-dataset risks | Schema and synthetic records are public; source corpus and row-level identifiers remain private |
+| Text structuring | Built an LLM-assisted workflow to separate abstracts into Introduction, Methods, Results, and Discussion | The public package exposes the downstream schema; prompts, raw abstracts, and private model runs are excluded |
+| Semantic measurement | Encoded sections, computed within-issue cosine similarity, and derived `IMEAN`, `MMEAN`, `RMEAN`, `DMEAN`, `ABMEAN`, `TIMEAN`, `Mean`, and `Top5_Mean` | Calculation pattern and synthetic execution are public |
+| Local knowledge field | Defined the comparison pool as journal × year × volume × issue and tracked issue size (`PP`) and fixed effects | Public implementation uses the same issue-key logic without private records |
+| Disruption analysis | Computed and modeled `cd_index`, distinguished disruptive and consolidating citation counts, and tested tail outcomes | Definitions and model design are public; citation-network inputs are private |
+| Visibility analysis | Implemented Q_Score, H_Score, and QWHI comparisons with JIF and citation/disruption indicators | Findings are summarized in aggregate; article-level scores and source tables are excluded |
+| Validation and extensions | Ran missingness/quality checks, regression diagnostics, IMRAD validation simulations, lagged-window work, and boundary-condition analyses | Design and next checks are public; generated figures and working outputs remain private |
+| Open research package | Separated synthetic demo data from empirical claims and added data-policy, findings, and experiment-design documentation | Public GitHub release is complete and auditable |
+
+The stages are cumulative: the public toolkit demonstrates the reproducible computational core, while the private corpus supports the empirical estimates summarized below.
+
+## 4. Current evidence map
 
 The private working analysis covers a Web of Science information-science and library-science corpus from 2010–2020. Depending on the specification, usable observations range from approximately 24,763 after a minimum-citation restriction to approximately 30,140–30,700 in broader regression samples. Exact sample counts must therefore be reported with the model specification, missing-data rule, and citation window.
 
@@ -42,7 +57,7 @@ The private working analysis covers a Web of Science information-science and lib
 
 The strongest working narrative is therefore a **visibility–disruption trade-off**, with Results-section alignment as a mechanism candidate. The coefficients are intentionally not presented as universally transferable constants: they depend on the corpus, outcome window, controls, and fixed effects.
 
-## 4. What has been learned
+## 5. What has been learned
 
 - A single raw citation count is not enough to represent visibility; QWHI-family measures provide a useful robustness direction.
 - `cd_index` and disruptive-share outcomes are related but not interchangeable in estimation. The main analysis should choose `cd_index` and treat the share as a robustness outcome.
@@ -50,6 +65,6 @@ The strongest working narrative is therefore a **visibility–disruption trade-o
 - The synthetic demo can validate schema handling and execution only. Its coefficient signs must never be cited as empirical findings.
 - The project is observational and initially concentrated in one broad field; causal and cross-field claims require additional tests.
 
-## 5. Evidence and provenance
+## 6. Evidence and provenance
 
 The findings were consolidated from the private working notes and outputs, including the local project synthesis, correlation summaries, regression diagnostics, variable definitions, and lagged-analysis work. Those files remain local and are intentionally not copied to GitHub. Public code exposes the calculation pattern and schema, not the private observations.
