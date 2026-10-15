@@ -13,6 +13,7 @@ The public repository is organized as a clean research-code package.
 │   └── metadata_sample/
 │       └── SAMPLE_with_metadata.json
 ├── docs/
+│   ├── ARCHITECTURE.md
 │   ├── DATA_POLICY.md
 │   ├── EXPERIMENT_DESIGN.md
 │   ├── RESEARCH_FINDINGS.md
@@ -38,3 +39,4 @@ The research narrative and planned robustness sequence are documented separately
 
 - [`RESEARCH_FINDINGS.md`](RESEARCH_FINDINGS.md) records the sanitized evidence map and interpretation guardrails.
 - [`EXPERIMENT_DESIGN.md`](EXPERIMENT_DESIGN.md) records estimands, baseline models, data-quality gates, and follow-up experiments.
+- [`ARCHITECTURE.md`](ARCHITECTURE.md) explains the engineering layers, data boundary, and end-to-end workflow.
